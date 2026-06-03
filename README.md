@@ -7,7 +7,7 @@ It’s more than just a food website — it’s a community for discovering, ord
 
 ## 🌐 Live Demo
 
-👉 [Visit Food Lover Live](https://your-deployment-link.vercel.app)
+👉 [Visit Food Lover Live](https://yantun-khaijan-weld.vercel.app)
 
 ---
 
