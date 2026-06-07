@@ -1,6 +1,7 @@
 import React, { use } from "react";
 import Add2CartButton from "../../../component/buttons/Add2CartButton";
 import { FoodCardCont } from "../../../context/FoodCardContext";
+import Image from "next/image";
 
 const getFoodDetails = async (id) => {
   const response = await fetch(
@@ -20,11 +21,18 @@ const FoodPageDetails = async ({ params }) => {
         <div className="grid grid-cols-1 lg:grid-cols-2">
           {/* Left Side Image */}
           <div className="relative h-[350px] md:h-[500px]">
-            <img
+            {/* <img
               src={foodImg}
               alt={title}
               className="w-full h-full object-cover"
-            />
+            /> */}
+            <Image
+              width={300}
+              height={450}
+              src={foodImg}
+              alt={title}
+              className="w-full h-full object-cover"
+            ></Image>
 
             {/* Category Badge */}
             <div className="absolute top-5 left-5">

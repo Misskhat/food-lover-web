@@ -3,6 +3,12 @@
 import { useEffect, useState } from "react";
 import { FaStar, FaRegHeart } from "react-icons/fa";
 import ReviewsSkeleton from "./ReviewsSkeleton";
+import Image from "next/image";
+import { Anek_Bangla } from "next/font/google";
+
+const anek = Anek_Bangla({
+  weight: "400",
+});
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
@@ -20,7 +26,7 @@ const Reviews = () => {
   if (loading) return <ReviewsSkeleton></ReviewsSkeleton>;
 
   return (
-    <div className="min-h-screen bg-gray-50 py-14 px-4">
+    <div className={`min-h-screen bg-gray-50 py-14 px-4 ${anek.className}`}>
       {/* Heading */}
       <div className="max-w-3xl mx-auto text-center mb-14">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-5">
@@ -43,10 +49,11 @@ const Reviews = () => {
             {/* User Info */}
             <div className="flex items-center gap-4 mb-5">
               <div className="relative w-14 h-14">
-                <img
+                <Image
+                  width={56}
+                  height={56}
                   src={review.photo}
                   alt={review.user}
-                  fill
                   className="rounded-full object-cover"
                 />
               </div>

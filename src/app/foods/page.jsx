@@ -4,6 +4,11 @@ import { FoodCardCont } from "../../context/FoodCardContext";
 import CardItems from "./CardItems";
 import InputSearch from "../../component/InputSearch";
 
+export const metadata = {
+  title: "All Foods",
+  description: "Here is the all foods",
+};
+
 const Foods = async ({ searchParams }) => {
   const { search = "" } = await searchParams;
   const getFoods = async (search) => {
